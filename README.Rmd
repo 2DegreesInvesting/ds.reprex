@@ -33,11 +33,22 @@ Each item in this syllabus corresponds to a meetup and a GitHub
 preserves a snapshot of this repository exactly as it was shown during thee
 meetup.
 
+## Motivation and overview.
+
+This meetup motivates the use of reprex and covers a fast-paced overview
+of its most useful features.
+
+Objectives:
+
+* Understand why writing a good reprex is worth the effort.
+* Overview the most useful features of reprex. 
+* Learn where to find previous meetups on the topic.
+
 ## Next (tentative)
 
-* Motivation and basic usage.
 * Do's and don'ts.
 * Synthetic data with `dput()` and friends.
+* Lesser known features.
 
 ## Resources
 
