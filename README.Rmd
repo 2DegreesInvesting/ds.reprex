@@ -26,19 +26,18 @@ At the end of this series you will be able to do things like these:
 
 * Prepare a reprex for different venues (e.g. GitHub and slack).
 * Understand what makes a reprex good (do’s and don’ts).
-* Create synthetic data with `dput()`, and with the tibble and datapasta
-packages.
+* Create synthetic data with `dput()` and friends.
 
 Each item in this syllabus corresponds to a meetup and a GitHub
 [release](https://github.com/2DegreesInvesting/ds.docker/releases) that
 preserves a snapshot of this repository exactly as it was shown during thee
 meetup.
 
-## Next
+## Next (tentative)
 
-* ...
-* ...
-* ...
+* Motivation and basic usage.
+* Do's and don'ts.
+* Synthetic data with `dput()` and friends.
 
 ## Resources
 
