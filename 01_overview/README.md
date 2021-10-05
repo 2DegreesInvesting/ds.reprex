@@ -35,16 +35,16 @@ packageVersion("fs")
 Consider how `path_ext_remove()` works:
 
 ``` r
-paths <- c("a.csv", "b.csv")
-path_ext_remove(paths)
+files_ext <- c("a.csv", "b.csv")
+path_ext_remove(files_ext)
 #> [1] "a" "b"
 ```
 
 We expect `path_ext_set()` to do the opposite; but it doesn’t
 
 ``` r
-paths <- c("a.csv", "b.csv")
-path_ext_set(paths, ".csv")
+files <- c("a", "b")
+path_ext_set(files, ".csv")
 #> a.csv b.NA
 ```
 
