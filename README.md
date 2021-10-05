@@ -45,4 +45,6 @@ Objectives:
 
 ## Resources
 
+* https://github.com/2DegreesInvesting/ds-incubator/issues/75
 * The [reprex](https://reprex.tidyverse.org) package.
+
