@@ -42,7 +42,6 @@ Objectives:
 
 * Understand why writing a good reprex is worth the effort.
 * Overview the most useful features of reprex. 
-* Learn where to find previous meetups on the topic.
 
 ## Next (tentative)
 
