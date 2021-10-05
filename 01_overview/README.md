@@ -26,23 +26,13 @@ But it’s safe to add to .Rprofile so it’s always available.
 This example shows a bug that was fixed a while ago
 (<https://github.com/r-lib/fs/issues/205>).
 
+This is unexpected:
+
 ``` r
 library(fs)
 packageVersion("fs")
 #> [1] '1.3.1'
-```
 
-Consider how `path_ext_remove()` works:
-
-``` r
-files_ext <- c("a.csv", "b.csv")
-path_ext_remove(files_ext)
-#> [1] "a" "b"
-```
-
-We expect `path_ext_set()` to do the opposite; but it doesn’t
-
-``` r
 files <- c("a", "b")
 path_ext_set(files, ".csv")
 #> a.csv b.NA
@@ -52,26 +42,13 @@ path_ext_set(files, ".csv")
 
 You can create a reprex in multiple ways.
 
--   Select + Addin
--   Copy + `reprex()`
+-   Select &gt; Addins &gt; “Reprex selection”
+-   Copy &gt; `reprex()`
+-   Copy &gt; `reprex(session_info = TRUE)`
+-   Copy &gt; `reprex(venue = "r")`
 -   `reprex(input = "01_overview/issue-205_reprex.R")`
 -   `reprex({ (multi-line) expression })`
-
-``` r
-library(fs)
-packageVersion("fs")
-
-paths <- c("a.csv", "b.csv")
-path_ext_set(paths, ".csv")
-```
-
-#### Venues
-
-The default venue is GitHub but you can post elsewhere:
-
-``` r
-reprex_slack()
-```
+-   Select &gt; Addins &gt; “Render reprex”
 
 #### Run a reprex
 
