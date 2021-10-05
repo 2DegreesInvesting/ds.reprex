@@ -40,13 +40,23 @@ path_ext_set(files, ".csv")
 
 #### Create a reprex
 
+Here is the clean code, with no output:
+
+``` r
+library(fs)
+packageVersion("fs")
+
+files <- c("a", "b")
+path_ext_set(files, ".csv")
+```
+
 You can create a reprex in multiple ways.
 
 -   Select &gt; Addins &gt; “Reprex selection”
 -   Copy &gt; `reprex()`
 -   Copy &gt; `reprex(session_info = TRUE)`
 -   Copy &gt; `reprex(venue = "r")`
--   `reprex(input = "01_overview/issue-205_reprex.R")`
+-   `reprex(input = "path/to/file.R")`
 -   `reprex({ (multi-line) expression })`
 -   Select &gt; Addins &gt; “Render reprex”
 
