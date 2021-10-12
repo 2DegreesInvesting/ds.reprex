@@ -108,7 +108,7 @@ mydata
 #> 2 27.3   4
 ```
 
-### Don’t take liberties with other people’s computers (who may run your code)
+### Don’t take liberties with other people’s computers
 
 Don’t trash other people’s workspaces.
 
