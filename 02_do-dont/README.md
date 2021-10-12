@@ -45,7 +45,8 @@ This example is bad.
 ``` r
 set.seed(3)
 rows <- sample(nrow(mtcars), size = 2)
-datapasta::tribble_paste(mtcars[rows, 1:2])  
+mydata = mtcars[rows, 1:2]
+datapasta::tribble_paste(mydata)  
 
 mydata <- tribble(
    ~mpg, ~cyl,
