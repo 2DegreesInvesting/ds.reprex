@@ -11,7 +11,7 @@ reprex::reprex(wd = ".", {
   mydata <- read.csv(here::here("02_do-dont", "data-only-i-have.csv"))
   mydata
   
-  # More code using `mydata` ...
+  code <- 1
 })
 ```
 
@@ -37,28 +37,6 @@ Or
 mydata <- read.csv(text = "mpg,cyl\n18.7,8\n27.3,4")
 mydata
 ```
-
-Or do a lil work behind the scenes …
-
-``` r
-set.seed(3)
-rows <- sample(nrow(mtcars), size = 2)
-datapasta::tribble_paste(mtcars[rows, 1:2])  
-```
-
-then share this:
-
-``` r
-library(tibble)
-
-mydata <- tribble(
-   ~mpg, ~cyl,
-   18.7,    8,
-   27.3,    4
-)
-```
-
-`dput()` is similar, but less readable.
 
 ### Include commands on a strict “need to run” basis
 
@@ -89,18 +67,12 @@ mydata <- tribble(
 )
 ```
 
+`dput()` is similar but less readable.
+
 ### Consider including the session information
 
 ``` r
-library(tibble)
-
-mydata <- tribble(
-   ~mpg, ~cyl,
-   18.7,    8,
-   27.3,    4
-)
-
-# ...
+code <- 1
 
 sessionInfo()
 ```
@@ -109,13 +81,7 @@ Or
 
 ``` r
 reprex::reprex({
-  library(tibble)
-  
-  mydata <- tribble(
-     ~mpg, ~cyl,
-     18.7,    8,
-     27.3,    4
-  )
+  code <- 1
 }, session_info = TRUE)
 ```
 
@@ -143,7 +109,7 @@ mydata
 
 ### Don’t take liberties with other people’s computers (who may run your code)
 
-Don’t clobber other people’s workspaces.
+Don’t trash other people’s workspaces.
 
 ``` r
 # Good: Restart R before you start (shift + ctrl/cmd + F10)
@@ -190,8 +156,7 @@ options(digits = 2)
 pi
 ```
 
-If you create files, delete them when you’re done or use temporary files
-(see also `tempdir()` and friends in the package withr).
+If you create files, delete them when you’re done.
 
 ``` r
 # Good
@@ -199,12 +164,17 @@ write(1, "to_remove.txt")
 # ...
 file.remove("to_remove.txt")
 
+# Bad
+write(1, "left_behind.txt")
+```
+
+Or use temporary files (see also `tempdir()` and friends in the package
+withr).
+
+``` r
 # Good
 auto_remove <- tempfile()
 write(1, auto_remove)
-
-# Bad
-write(1, "left_behind.txt")
 ```
 
 -   Don’t delete files or objects that you didn’t create in the first
@@ -212,9 +182,9 @@ write(1, "left_behind.txt")
 
 ### [This seems like a lot of work!](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html#this-seems-like-a-lot-of-work)
 
-Yes. You are asking other people to do work too. Writing an excellent
-reprex will either solve your own problem or elicit the desired
-behaviour in others.
+Yes but you’re asking other people to do work too. Writing an excellent
+reprex will likely solve your own problem or make others help you more
+happily.
 
 ------------------------------------------------------------------------
 
