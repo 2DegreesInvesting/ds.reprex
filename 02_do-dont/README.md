@@ -6,10 +6,13 @@
 You may be tempted so share this:
 
 ``` r
-mydata <- read.csv(here::here("02_do-dont", "data-only-i-have.csv"))
-mydata
-
-# More code using `mydata` ...
+reprex::reprex(wd = ".", {
+  # https://github.com/2DegreesInvesting/ds.reprex/
+  mydata <- read.csv(here::here("02_do-dont", "data-only-i-have.csv"))
+  mydata
+  
+  # More code using `mydata` ...
+})
 ```
 
 But this is better because the data is smaller and more built-in:
