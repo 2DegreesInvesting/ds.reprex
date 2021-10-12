@@ -32,6 +32,8 @@ Objectives:
 -   Understand why writing a good reprex is worth the effort.
 -   Overview the most useful features of reprex.
 
+[Demo](https://github.com/2DegreesInvesting/ds.reprex/tree/master/01_overview).
+
 ## Do’s and don’ts
 
 This meetup covers the article “[Reprex do’s and
@@ -40,6 +42,8 @@ don’ts](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html)”.
 Objectives:
 
 -   Learn how to make an excellent reproducible example.
+
+[Demo](https://github.com/2DegreesInvesting/ds.reprex/tree/master/02_do-dont).
 
 ## Next (tentative)
 
