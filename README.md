@@ -45,9 +45,18 @@ Objectives:
 
 [Demo](https://github.com/2DegreesInvesting/ds.reprex/tree/master/02_do-dont).
 
-## Next (tentative)
+### Package philosophy
 
--   Package philosophy and design.
+This meetup covers the [Package
+philosophy](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html#package-philosophy)
+section of the article [Reprex do’s and
+don’ts](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html).
+The content is short, so we’ll have plenty of time to discuss or explore
+other interesting aspects of reprex.
+
+Objective:
+
+-   Explore the main features of reprex that reflect its philosophy.
 
 ## Resources
 
