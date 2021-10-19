@@ -17,7 +17,7 @@ knitr::opts_chunk$set(
 > Done in a separate R process, via [callr](https://callr.r-lib.org/), to
 guarantee it is self-contained.
 
-* If the code is not self-contained, you get an error.
+* This code is not self-contained, so you get an error.
 
 ```r
 # Author's environment
@@ -59,7 +59,7 @@ mean(y)
 > Use chunk option comment = "#>" to include the output while retaining
 executability.
 
-* The output of this reprex is uncommented.
+* This console output is uncommented (does't start with "#").
 
 ```r
 reprex::reprex_r(comment = ">", {
@@ -75,7 +75,7 @@ mean(y)
 > [1] 2.5
 ```
 
-* If you try to copy + paste + run it, you get an error.
+* When you try to run it you get an error.
 
 ```{r error=TRUE}
 (y <- 1:4)

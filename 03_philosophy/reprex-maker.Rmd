@@ -1,0 +1,27 @@
+---
+output: github_document
+---
+
+This is a reprex maker with features following the [reprex
+philosophy](https://reprex.tidyverse.org/articles/reprex-dos-and-donts.html#package-philosophy):
+
+* If the code is not self-contained, you get an error.
+* It captures the output that you would normally see on your screen.
+* It allows you to copy + paste + run the output.
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  error = TRUE,
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+The reprex starts here:
+
+```{r}
+mean(y)
+
+(y <- 1:4)
+mean(y)
+```
